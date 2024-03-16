@@ -1,0 +1,19 @@
+################ 14.3 ################
+In our project we would like to use machine learning algorithms to classify the genre of a given song.
+
+We would like to answer or explore the following questions while making this project:
+1. How we use the mp3/wav files for machine learning? do we need to conver them to one format or we need to
+   convert them to a photo or other way of presentation for them to indentify the genre.
+2. What kind of data manipulation if at, all is needed?
+3. How to use and create random forests? and how is it compaired to the other machine learning algorithms:
+    1. Random Forests.
+    2. Decision Trees.
+    3. KNN.
+    4. Adaboost
+    5. Neural Networks.
+
+-- Created the project and downloaded the dadasets.
+-- converted all the mp3 files to wav files in the emotional dataset.
+
+
+################ 15.3 ################
