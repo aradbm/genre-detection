@@ -1,0 +1,47 @@
+################ 14.3 ################
+In our project we would like to use machine learning algorithms to classify the genre of a given song.
+
+We would like to answer or explore the following questions while making this project:
+1. How we use the mp3/wav files for machine learning? do we need to conver them to one format or we need to
+   convert them to a photo or other way of presentation for them to indentify the genre.
+2. What kind of data manipulation if at, all is needed?
+3. How to use and create random forests? and how is it compaired to the other machine learning algorithms:
+    1. Random Forests.
+    2. Decision Trees.
+    3. KNN.
+    4. Adaboost
+    5. Neural Networks.
+
+-- Created the project and downloaded the dadasets.
+-- converted all the mp3 files to wav files in the emotional dataset using the following script:
+find . -type f -name "*.mp3" -exec ffmpeg -i {} -acodec pcm_s16le -ar 44100 {}.wav \;
+
+
+################ 29.3 ################
+We doscovered the different strategies to use .wav files with machine learning models:
+1. Mel-Frequency Cepstral Coefficients (MFCCs)
+2. Spectrogram
+3. Chroma Features
+
+Also we take to considiration that there are some genres that have more audio files than other when combining the data.
+Some research found 3 different aproaches for this problem:
+1. Under-sampling: Reduce the number of instances in the over-represented classes.
+2. Over-sampling: Increasing the number of instances in the under-represented classes by duplicating.
+3. Weighted Training: Adjusting the weight of classes in the loss function when training.
+
+
+We decide to use the MFCCs as our data is coming from 2 different datasets - one with 30 second audio files and the 
+other 1 minute audio files, so the length of the original length of the audio file doesn't matter, and for
+the imbalanced data approach we will choose later in the future. Our next step is - extract 
+the MFCCs from our data and join it to one big table dataset.
+
+While extracting the mfcc, we encountered a currupt file - data/gen-dataset/genres_original/jazz/jazz.00054.wav
+in our dataset.
+
+After handling and creating the mfcc, we use again the libary "librosa" to extract the chroma features into
+the features/chroma folder.
+
+-- In total we got 2 csv's that contain each audio file, its class (genre) and it's features according to the 
+strategy we chose.
+-- We would like to explore which feature extracting algorithm is better for our problem.
+
