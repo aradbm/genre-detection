@@ -1,4 +1,3 @@
-################ 14.3 ################
 In our project we would like to use machine learning algorithms to classify the genre of a given song.
 
 We would like to answer or explore the following questions while making this project:
@@ -16,8 +15,6 @@ We would like to answer or explore the following questions while making this pro
 -- converted all the mp3 files to wav files in the emotional dataset using the following script:
 find . -type f -name "*.mp3" -exec ffmpeg -i {} -acodec pcm_s16le -ar 44100 {}.wav \;
 
-
-################ 29.3 ################
 We doscovered the different strategies to use .wav files with machine learning models:
 1. Mel-Frequency Cepstral Coefficients (MFCCs)
 2. Spectrogram
@@ -59,8 +56,6 @@ Running knn with k=5 on the mfcc features we get a result of 57.75% accuracy and
 * We would like to explore and see how changing the k will impact the results, for each of the features lists.
 * We also decided to use for each algorithm the 2 feature files we created and compare between them.
 
-
-################ 30.3 ################
 Now, after the KNN, we implement other machine learning algorithms for our problem. In total:
 1. KNN
 2. SVM
