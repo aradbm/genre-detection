@@ -67,3 +67,4 @@ Now, after the KNN, we implement other machine learning algorithms for our probl
 * Ideas for future work:
 1. Use the spectrogram strategy - which includes augmenting the data so the length will be the same for all the files and the spectrogram pictures will be the same. On the pictures, we can run for example knn.
 2. Try other ML algorithms like combining different classifiers into a better one using adaboost.
+3. Run the ML algorithms with a combined data table of the chroma and the mfcc features.

@@ -51,7 +51,7 @@ def train(model, X_train, y_train, num_epochs, learning_rate, batch_size=64):
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
-        if (epoch + 1) % 50 == 0:
+        if (epoch + 1) % 250 == 0:
             print(f'Epoch [{epoch + 1}/{num_epochs}], Loss: {loss.item()}')
 
 
@@ -71,10 +71,11 @@ if __name__ == '__main__':
     X, y = load_data(file_path)
     x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
     input_size = X.shape[1]
-    hidden_size = 600
+    hidden_size = 300
     num_classes = len(torch.unique(y))
 
     model = NeuralNetwork(input_size, hidden_size, num_classes)
-    train(model, x_train, y_train, num_epochs=5000, learning_rate=0.001)
-    evaluate(model, x_test, y_test)
+    train(model, x_train, y_train, num_epochs=2000, learning_rate=0.001)
     print(model)
+    print('File:', file_path)
+    evaluate(model, x_test, y_test)
