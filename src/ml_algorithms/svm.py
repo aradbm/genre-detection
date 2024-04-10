@@ -27,12 +27,14 @@ class SVMClassifier(ClassifierInterface):
 if __name__ == '__main__':
     configurations = [
         (1.0, 'linear'),
-        (1.0, 'rbf'),  # RBF kernel is the default
+        (1.0, 'rbf'),
         (1.0, 'poly'),
-        (1.0, 'sigmoid')
+        (1.0, 'sigmoid'),
     ]
-    file_paths = ['features/chroma/features_29032024_1938.csv',
-                  'features/mfcc/features_29032024_1930.csv']
+    file_paths = [
+        'features/chroma/features_29032024_1938.csv',
+        'features/mfcc/features_29032024_1930.csv',
+        'features/combined_features.csv']
     n_runs = 20
 
     results = {}

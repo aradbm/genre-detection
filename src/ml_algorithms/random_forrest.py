@@ -35,9 +35,16 @@ if __name__ == '__main__':
          'min_samples_split': 4, 'min_samples_leaf': 2},
         {'n_estimators': 100, 'max_depth': None, 'criterion': 'entropy',
          'min_samples_split': 2, 'min_samples_leaf': 1},
+        {'n_estimators': 150, 'max_depth': None, 'criterion': 'entropy',
+            'min_samples_split': 4, 'min_samples_leaf': 2},
+        {'n_estimators': 100, 'max_depth': 3, 'criterion': 'entropy',
+            'min_samples_split': 2, 'min_samples_leaf': 1},
+        {'n_estimators': 150, 'max_depth': 7, 'criterion': 'entropy',
+         'min_samples_split': 4, 'min_samples_leaf': 2},
     ]
     file_paths = ['features/chroma/features_29032024_1938.csv',
-                  'features/mfcc/features_29032024_1930.csv']
+                  'features/mfcc/features_29032024_1930.csv',
+                  'features/combined_features.csv']
     n_runs = 20
 
     results = {}

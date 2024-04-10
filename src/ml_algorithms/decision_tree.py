@@ -40,7 +40,8 @@ if __name__ == '__main__':
             'min_samples_split': 10, 'min_samples_leaf': 2}
     ]
     file_paths = ['features/chroma/features_29032024_1938.csv',
-                  'features/mfcc/features_29032024_1930.csv']
+                  'features/mfcc/features_29032024_1930.csv',
+                  'features/combined_features.csv']
     n_runs = 20
 
     results = {}

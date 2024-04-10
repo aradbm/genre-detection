@@ -66,16 +66,17 @@ def evaluate(model, X_test, y_test):
 
 
 if __name__ == '__main__':
-    file_path = 'features/chroma/features_29032024_1938.csv'
+    # file_path = 'features/chroma/features_29032024_1938.csv'
     # file_path = 'features/mfcc/features_29032024_1930.csv'
+    file_path = 'features/combined_features.csv'
     X, y = load_data(file_path)
     x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
     input_size = X.shape[1]
-    hidden_size = 300
+    hidden_size = 600
     num_classes = len(torch.unique(y))
 
     model = NeuralNetwork(input_size, hidden_size, num_classes)
-    train(model, x_train, y_train, num_epochs=2000, learning_rate=0.001)
+    train(model, x_train, y_train, num_epochs=8000, learning_rate=0.00001)
     print(model)
     print('File:', file_path)
     evaluate(model, x_test, y_test)

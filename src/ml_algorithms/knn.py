@@ -27,7 +27,8 @@ class KNNClassifier(ClassifierInterface):
 if __name__ == '__main__':
     k_values = [3, 5, 7, 9, 13, 17]
     file_paths = ['features/chroma/features_29032024_1938.csv',
-                  'features/mfcc/features_29032024_1930.csv']
+                  'features/mfcc/features_29032024_1930.csv',
+                  'features/combined_features.csv']
     n_runs = 20
 
     results = {}
