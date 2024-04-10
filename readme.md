@@ -10,6 +10,13 @@ This project explores music genre classification using different machine learnin
 - Random Forest
 - Neural Network
 
+## Documents
+
+- [Project Description](/docs/Project_Description.png)
+- [Project Proposal](/docs/Project_Proposal.pdf)
+- [Project Presentation](/docs/Project_Presentation.pdf)
+- [Project Log](/docs/Project_Log.txt)
+
 ## Setup
 
 To run this project, ensure Python 3.x is installed on your machine. Additionally, the following Python libraries are required:
